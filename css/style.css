@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  padding: 30px;
+  background-color: rgba(202, 200, 200, 0.068);
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 500px;
+  height: 800px;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 30px 80px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.list {
+  margin: 20px 0px 0px 0px;
+}
+
+.text {
+  color: black;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0px 0px 0px;
+  padding: 15px;
+  border: 1px solid #000;
+  background-color: rgb(183, 181, 181);
+}
+
+.done {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.delete {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.title {
+  margin: 15px 0px 0px 0px;
+}
+
+.task.completed .text {
+  position: relative;
+}
+
+.task.completed .text::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 15%;
+  background-color: red;
+  transform: translate(0, -50%);
+}
